@@ -1,16 +1,25 @@
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 import Layout from "./Layout";
-import './App.css'
+import Home from "./routes/Home";
+import About from "./routes/About";
+import Contact from "./routes/Contact";
+import Products from "./routes/Products";
+import Services from "./routes/Services";
+import NoMatch from "./routes/NoMatch";
+
 import './sanitize.css'
+import './App.css'
 
 function App() {
 	return (
 		<Routes>
 			<Route path="/" element={<Layout />}>
-				{/* <Route index element={<Home />} />
+				<Route index element={<Home />} />
 				<Route path="about" element={<About />} />
-				<Route path="dashboard" element={<Dashboard />} />
-				<Route path="*" element={<NoMatch />} /> */}
+				<Route path="contact" element={<Contact />} />
+				<Route path="products" element={<Products />} />
+				<Route path="services" element={<Services />} />
+				<Route path="*" element={<NoMatch />} />
 			</Route>
 		</Routes>
 	)
