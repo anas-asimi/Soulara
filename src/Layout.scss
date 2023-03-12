@@ -1,0 +1,19 @@
+header{
+    .bar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .panel{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+        }
+    }
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+    }
+}

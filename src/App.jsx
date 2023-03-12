@@ -7,8 +7,7 @@ import Products from "./routes/Products";
 import Services from "./routes/Services";
 import NoMatch from "./routes/NoMatch";
 
-import './sanitize.css'
-import './App.css'
+import './sanitize.css' // reset css
 
 function App() {
 	return (
