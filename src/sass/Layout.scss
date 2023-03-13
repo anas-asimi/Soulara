@@ -1,0 +1,58 @@
+@use "theme" as *;
+
+@mixin container {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 8px;
+  width: min(100%, 384px + 50%, 1200px);
+}
+
+header {
+  .bar {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include container;
+
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      p {
+        font-size: xx-large;
+        font-weight: 300;
+      }
+    }
+
+    .panel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+
+      .select-container {
+        height: 32px;
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        border: 1px solid $black;
+      }
+    }
+  }
+
+  nav {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    background-color: $blue;
+    a {
+      color: $white;
+      font-size: large;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+// colors
+$green: #48ce3c;
+$blue: #0075ff;
+$black: #222222;
+$dark-gray: #525252;
+$gray: #717171;
+$light-gray: #bbbbbb;
+$white: #fafafa;
+
+// reset
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  color: $black;
+  font-family: "Roboto", "Courier New", Courier, monospace;
+}
+
+// typographie
+h1 {
+  font-size: 76px;
+  font-weight: 100;
+  line-height: normal;
+}
+h2 {
+  font-size: 61px;
+  font-weight: 200;
+  line-height: normal;
+}
+h3 {
+  font-size: 48px;
+  font-weight: 300;
+  line-height: normal;
+}
+h4 {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: normal;
+}
+h5 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: normal;
+}
+h6 {
+  font-size: 25px;
+  font-weight: 600;
+  line-height: normal;
+}
+p.big {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+}
+p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+p.small {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
