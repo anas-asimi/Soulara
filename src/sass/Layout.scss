@@ -30,16 +30,6 @@ header {
       align-items: center;
       justify-content: center;
       gap: 16px;
-
-      .select-container {
-        height: 32px;
-        width: 100px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 8px;
-        border: 1px solid $black;
-      }
     }
   }
 

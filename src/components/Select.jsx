@@ -1,13 +1,24 @@
-import {useState} from 'react'
+import { useState , useRef } from 'react'
 import './Select.scss'
 
+
 function Select() {
+  const [language, setLanguage] = useState('french')
+  const options = useRef()
+  let languages = ['french', 'arabic', 'english']
+  function optionsToggler() {
+    options.current.classList.toggle('expanded')
+  }
   return (
-    <select name="Language" id="Language" defaultValue={'fr'}>
-      <option value="fr">French</option>
-      <option value="ar">Arabic</option>
-      <option value="en">English</option>
-    </select>
+    <div className="select-container" onClick={optionsToggler}>
+      <div className="selected">
+        {language}
+        <img src="/angle-down.svg" height={'20px'} />
+      </div>
+      <div className="options" ref={options} >
+        {languages.map((option) => (<p className='option' key={option} onClick={e => setLanguage(option)}>{option}</p>))}
+      </div>
+    </div>
   )
 }
 

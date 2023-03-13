@@ -1,0 +1,59 @@
+@use "../sass/theme.scss" as *;
+
+.select-container{
+    height: 32px;
+    width: 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 2px;
+    border: 1px solid $blue;
+
+    .selected{
+        width: 100%;
+        padding: 0 8px;
+        color: $blue;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;   
+        img{
+            transition: all 0.3s;
+        } 
+    }
+
+    .options{
+        display: none;
+        position: absolute;
+        width: 100px;
+        top: 100%;
+        left: 50%;
+        translate: -50% 0;
+        background-color: $white;
+        border-radius: 2px;
+        border: 1px solid $blue;
+
+        .option{
+            height: 32px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding-left: 8px;
+            border-top: 1px solid $blue;
+            color: $blue;
+            &:hover{
+                background-color: $blue;
+                color: $white;
+            }           
+        }
+    }
+    &:has(.expanded){
+        .options{
+            display: block;
+        }
+        .selected img{
+            transform: rotateX(180deg);
+        }
+    }
+}
