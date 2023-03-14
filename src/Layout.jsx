@@ -21,9 +21,9 @@ function Layout() {
         <nav>
           <Link to={'/'} >Accueil</Link>
           <Link to={'about'} >Qui sommes-nous</Link>
-          <Link to={'contact'} >Produicts</Link>
-          <Link to={'products'} >Services</Link>
-          <Link to={'services'} >contacter</Link>
+          <Link to={'contact'} >contacts</Link>
+          <Link to={'products'} >Produicts</Link>
+          <Link to={'services'} >Services</Link>
         </nav>
       </header>
       <Outlet />

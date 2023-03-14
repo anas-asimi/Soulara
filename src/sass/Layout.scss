@@ -19,8 +19,9 @@ header {
       display: flex;
       align-items: center;
       justify-content: center;
+      gap: 8px;
       p {
-        font-size: xx-large;
+        font-size: 32px;
         font-weight: 300;
       }
     }
