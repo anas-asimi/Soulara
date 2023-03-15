@@ -1,0 +1,18 @@
+@use "../sass/theme.scss" as *;
+
+.button{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $blue;
+    padding: 16px 32px;
+    border-radius: 128px;
+    cursor: pointer;
+    p{
+        color: $white;
+    }
+    img{
+        rotate: -90deg;
+    }
+}

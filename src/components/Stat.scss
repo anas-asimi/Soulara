@@ -1,0 +1,12 @@
+@use "../sass/theme.scss" as *;
+
+.stat{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    h5,p{
+        color: $white;
+    }
+}

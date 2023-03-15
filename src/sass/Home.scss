@@ -1,0 +1,105 @@
+@use "theme" as *;
+// @include container;
+
+.hero {
+  background-image: linear-gradient(
+      120deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.7988445378151261) 31%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("/hero-image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .content {
+    @include idealWidth;
+    padding: 128px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 32px;
+    h2 {
+      max-width: min(774px, 80%);
+      color: $white;
+    }
+  }
+}
+.about {
+  @include idealWidth;
+  padding: 128px 0 64px 0;
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+  > img {
+    @include boxShadow;
+    border-radius: 4px;
+    min-width: 500px;
+    aspect-ratio: 4 / 3;
+    flex: 1;
+  }
+  .text {
+    height: 100%;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    h5 {
+      color: $blue;
+    }
+    p {
+      height: 100%;
+    }
+  }
+}
+.wave {
+  width: 100%;
+}
+.stats-wrapper {
+  background-color: $blue;
+  .stats {
+    @include idealWidth;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .line {
+      width: 2px;
+      height: 64px;
+      background-color: $white;
+      border-radius: 8px;
+    }
+  }
+}
+.agroequipement {
+  background-color: $blue;
+  padding-top: 128px;
+}
+.agrofourniture {
+  background-color: $green;
+}
+.services {
+  .container {
+    @include idealWidth;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+    h3 {
+      color: $white;
+    }
+    .cards {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 32px;
+    }
+  }
+}
+.triangle{
+  height: 128px;
+  width: 100%;
+  background-color: $blue;
+  color: $green;
+}

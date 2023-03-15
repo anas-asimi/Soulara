@@ -1,0 +1,19 @@
+@use "../sass/theme.scss" as *;
+
+.card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  img {
+    @include boxShadow;
+    border-radius: 4px;
+    height: 256px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+  p{
+    color: $white;
+  }
+}

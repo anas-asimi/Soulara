@@ -1,19 +1,15 @@
 @use "theme" as *;
 
-@mixin container {
-  margin-right: auto;
-  margin-left: auto;
-  padding: 0 8px;
-  width: min(100%, 384px + 50%, 1200px);
-}
-
 header {
+  position: sticky;
+  top: 0;
+  background-color: $white;
   .bar {
     height: 64px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @include container;
+    @include idealWidth;
 
     .brand {
       display: flex;

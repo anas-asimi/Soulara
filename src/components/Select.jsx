@@ -20,7 +20,7 @@ function Select() {
     <div className="select-container" onClick={optionsToggler} onMouseLeave={optionsHide}>
       <div className="selected">
         {language}
-        <img src="/angle-down.svg" height={'20px'} />
+        <img src="/angle-down-blue.svg" height={'20px'} />
       </div>
       <div className="options" ref={options} >
         {languages.map((option) => (<p className='option' key={option} onClick={() => { setLanguage(option) }}>{option}</p>))}
