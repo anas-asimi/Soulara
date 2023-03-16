@@ -16,6 +16,7 @@ function Home() {
           <FancyButton destination={"contact"} text={'Contactez-nous'} />
         </div>
       </div>
+      {/* ======  ====== */}
       <div className="about">
         <img src="https://cmgp-cas.com/wp-content/uploads/2022/02/Bassins.jpg" />
         <div className="text">
@@ -33,7 +34,9 @@ function Home() {
           <FancyButton destination={"about"} text={'Qui sommes-nous'} />
         </div>
       </div>
+      {/* ======  ====== */}
       <img className="wave" src="/wave.svg" />
+      {/* ======  ====== */}
       <div className="stats-wrapper">
         <div className="stats">
           <Stat number={'961'} text={'Projets réalisés'} />
@@ -45,6 +48,7 @@ function Home() {
           <Stat number={'12'} text={'Fournisseurs Internationaux'} />
         </div>
       </div>
+      {/* ======  ====== */}
       <div className="services agroequipement">
         <div className="container">
           <h3>AGROÉQUIPEMENT</h3>
@@ -56,7 +60,9 @@ function Home() {
           </div>
         </div>
       </div>
+      {/* ======  ====== */}
       <SectionsDivider className='sections-divider' />
+      {/* ======  ====== */}
       <div className="services agrofourniture">
         <div className="container">
           <h3>AGROFOURNITURE</h3>
@@ -68,7 +74,19 @@ function Home() {
           </div>
         </div>
       </div>
+      {/* ======  ====== */}
       <SectionsDivider className='sections-divider' />
+      {/* ======  ====== */}
+      <div className="partenaires">
+        <h5>NOS PARTENAIRES</h5>
+        <div className="slider">
+          <img src="/partners/partner (1).jpg"/>
+          <img src="/partners/partner (2).jpg"/>
+          <img src="/partners/partner (3).jpg"/>
+          <img src="/partners/partner (4).jpg"/>
+          <img src="/partners/partner (5).jpg"/>
+        </div>
+      </div>
     </>
   );
 }

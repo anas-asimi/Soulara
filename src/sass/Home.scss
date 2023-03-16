@@ -46,9 +46,6 @@
     h5 {
       color: $blue;
     }
-    p {
-      height: 100%;
-    }
   }
 }
 .wave {
@@ -58,6 +55,7 @@
 }
 .stats-wrapper {
   background-color: $blue;
+  padding-top: 64px;
   .stats {
     @include idealWidth;
     display: flex;
@@ -74,12 +72,11 @@
 .agroequipement {
   background-color: $blue;
   padding-top: 128px;
-  padding-bottom: 32px;
+  padding-bottom: 64px;
 }
 .agrofourniture {
   background-color: $green;
-  padding-top: 32px;
-  padding-bottom: 64px;
+  padding: 64px 0;
 }
 .services {
   .container {
@@ -100,13 +97,32 @@
     }
   }
 }
-.sections-divider{
+.sections-divider {
   height: 64px;
   width: 100%;
   background-color: $blue;
   fill: $green;
-  &:nth-of-type(2){
+  &:nth-of-type(2) {
     background-color: transparent;
     transform: rotateX(180deg);
+  }
+}
+.partenaires {
+  padding-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 32px;
+  .slider {
+    width: 100%;
+    height: 128px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      height: 128px;
+      filter: grayscale(1);
+    }
   }
 }
