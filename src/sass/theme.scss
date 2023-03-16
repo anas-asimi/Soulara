@@ -18,9 +18,23 @@ $white: #fafafa;
   width: min(100%, 384px + 50%, 1200px);
 }
 
-//width
+//box shadow
 @mixin boxShadow {
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+}
+
+// scrollbar-theme property
+body {
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    background: $white;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $blue;
+    border-radius: 8px;
+  }
 }
 
 // reset

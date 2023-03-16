@@ -1,6 +1,7 @@
 import FancyButton from "../components/FancyButton";
 import Stat from "../components/Stat";
 import Card from "../components/Card";
+import { ReactComponent as SectionsDivider } from "../../public/triangle-bottom-right-icon.svg";
 import "../sass/Home.scss";
 
 function Home() {
@@ -55,7 +56,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <img className="triangle" src="/triangle-bottom-right-icon.svg" />
+      <SectionsDivider className='sections-divider' />
       <div className="services agrofourniture">
         <div className="container">
           <h3>AGROFOURNITURE</h3>
@@ -67,6 +68,7 @@ function Home() {
           </div>
         </div>
       </div>
+      <SectionsDivider className='sections-divider' />
     </>
   );
 }

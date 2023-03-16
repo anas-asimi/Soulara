@@ -8,6 +8,7 @@
     background-color: $blue;
     padding: 16px 32px;
     border-radius: 128px;
+    @include boxShadow;
     cursor: pointer;
     p{
         color: $white;

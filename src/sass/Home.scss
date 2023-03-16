@@ -35,13 +35,11 @@
   > img {
     @include boxShadow;
     border-radius: 4px;
-    min-width: 500px;
-    aspect-ratio: 4 / 3;
-    flex: 1;
+    height: 400px;
+    width: 500px;
   }
   .text {
-    height: 100%;
-    flex: 2;
+    max-height: 400px;
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -55,6 +53,8 @@
 }
 .wave {
   width: 100%;
+  height: 64px;
+  object-fit: cover;
 }
 .stats-wrapper {
   background-color: $blue;
@@ -74,9 +74,12 @@
 .agroequipement {
   background-color: $blue;
   padding-top: 128px;
+  padding-bottom: 32px;
 }
 .agrofourniture {
   background-color: $green;
+  padding-top: 32px;
+  padding-bottom: 64px;
 }
 .services {
   .container {
@@ -97,9 +100,13 @@
     }
   }
 }
-.triangle{
-  height: 128px;
+.sections-divider{
+  height: 64px;
   width: 100%;
   background-color: $blue;
-  color: $green;
+  fill: $green;
+  &:nth-of-type(2){
+    background-color: transparent;
+    transform: rotateX(180deg);
+  }
 }
