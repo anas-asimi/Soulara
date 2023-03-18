@@ -78,13 +78,30 @@ function Home() {
       <SectionsDivider className='sections-divider' />
       {/* ======  ====== */}
       <div className="partenaires">
-        <h5>NOS PARTENAIRES</h5>
-        <div className="slider">
-          <img src="/partners/partner (1).jpg"/>
-          <img src="/partners/partner (2).jpg"/>
-          <img src="/partners/partner (3).jpg"/>
-          <img src="/partners/partner (4).jpg"/>
-          <img src="/partners/partner (5).jpg"/>
+        <h3>NOS PARTENAIRES</h3>
+        <div className="slider-wrapper">
+          <div className="slider">
+            <img src="/partners/magriser.png" />
+            <img src="/partners/irrisys.png" />
+            <img src="/partners/rivulis.png" />
+            <img src="/partners/azud.png" />
+            <img src="/partners/netafim.png" />
+            <img src="/partners/pedrollo.png" />
+            <img src="/partners/sicda.png" />
+            <img src="/partners/plastica-alfa.png" />
+            <img src="/partners/rainbird.png" />
+            <img src="/partners/irritec.png" />
+            <img src="/partners/magriser.png" />
+            <img src="/partners/irrisys.png" />
+            <img src="/partners/rivulis.png" />
+            <img src="/partners/azud.png" />
+            <img src="/partners/netafim.png" />
+            <img src="/partners/pedrollo.png" />
+            <img src="/partners/sicda.png" />
+            <img src="/partners/plastica-alfa.png" />
+            <img src="/partners/rainbird.png" />
+            <img src="/partners/irritec.png" />
+          </div>
         </div>
       </div>
     </>
