@@ -1,9 +1,7 @@
 @use "theme" as *;
 
-
-
 // reset
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -14,10 +12,14 @@
 }
 
 // scroll and overflow
-html , body {
+html,
+body {
   width: 100%;
   height: 100vh;
   overflow-x: hidden;
+}
+#root{
+  min-height: 100vh;
 }
 
 // scrollbar-theme property
@@ -42,11 +44,11 @@ header {
   background-color: $white;
   @include boxShadow;
   .bar {
+    @include idealWidth;
     height: 64px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @include idealWidth;
 
     .brand {
       display: flex;
@@ -80,5 +82,41 @@ header {
       color: $white;
       font-size: large;
     }
+  }
+}
+footer {
+  background-color: $black;
+  padding-top: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  & * {
+    color: $white;
+  }
+  .container {
+    @include idealWidth;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .left{
+      width: 350px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .right{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 16px;
+      .social{
+        display: flex;
+        gap: 16px
+      }
+    }
+  }
+  .copy-right {
+    @include idealWidth;
+    text-align: center;
   }
 }

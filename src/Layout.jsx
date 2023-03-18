@@ -1,4 +1,5 @@
 import { Routes, Route, Outlet, Link } from "react-router-dom";
+import FancyButton from "./components/FancyButton";
 import Select from './components/Select'
 import './sass/Layout.scss'
 
@@ -27,6 +28,25 @@ function Layout() {
         </nav>
       </header>
       <Outlet />
+      <footer>
+        <div className="container">
+          <div className="left">
+            <h2>Soulara inc</h2>
+            <p>Etudes et réalisation des projets agricoles Bassins agricoles, Goutte a goutte, Terrassements, Import et Export.</p>
+            <FancyButton destination={"contact"} text={'Contactez-nous'} size={'regular'} />
+          </div>
+          <div className="right">
+            <div className="social">
+              <a href="#" target="_blank"><img src="/facebook.svg" alt="facebook" height={32} /></a>
+              <a href="#" target="_blank"><img src="/whatsapp.svg" alt="whatsapp" height={32} /></a>
+              <a href="#" target="_blank"><img src="/youtube.svg" alt="youtube" height={32} /></a>
+            </div>
+            <p>05355-28648 / 0661438144</p>
+            <p>Résidence kounouz 2 Mag 4 Av des Fars, Meknès 50000</p>
+          </div>
+        </div>
+        <div className="copy-right">©2023 Anas Asimi, all rights reserved</div>
+      </footer>
     </>
   )
 }
