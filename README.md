@@ -4,3 +4,7 @@
 <h1 align="center">
   Soulara inc
 </h1>
+<h4>WireFrame</h4>
+<img alt="wireframe" src="https://raw.githubusercontent.com/anas-asimi/Soulara/master/design/Wireframe.jpg" width="60" />
+<h4>Design</h4>
+<img alt="wireframe" src="https://raw.githubusercontent.com/anas-asimi/Soulara/master/design/All.jpg" width="60" />
