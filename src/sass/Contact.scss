@@ -1,0 +1,25 @@
+@use "theme" as *;
+
+main.contact {
+  @include idealWidth;
+  padding: 64px 0;
+  display: flex;
+  gap: 32px;
+  form {
+    flex: 1;
+  }
+  .map {
+    position: relative;
+    height: 450px;
+    flex: 1;
+    overflow: hidden;
+    @include boxShadow;
+    border-radius: 4px;
+    iframe {
+      position: absolute;
+      height: calc(450px + 62px);
+      width: 100%;
+      bottom: 0;
+    }
+  }
+}

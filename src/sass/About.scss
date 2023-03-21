@@ -1,6 +1,6 @@
 @use "theme" as *;
 
-main{
+main.about{
     @include idealWidth;
     padding-top: 128px;
     max-width: 850px;
