@@ -1,0 +1,35 @@
+@use "theme" as *;
+
+main{
+    @include idealWidth;
+    padding-top: 128px;
+    max-width: 850px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    h5{
+        color: $blue;
+    }
+}
+.services{
+    padding-top: 64px;
+    padding-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    .service{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        img{
+            height: 128px;
+            aspect-ratio: 1/1;
+        }
+        p{
+            color: $black;
+        }
+    }
+}

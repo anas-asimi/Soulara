@@ -1,9 +1,17 @@
-import { Routes, Route, Outlet, Link } from "react-router-dom";
+import { useEffect } from 'react';
+import { useLocation, Outlet, Link } from "react-router-dom";
 import FancyButton from "./components/FancyButton";
 import Select from './components/Select'
 import './sass/Layout.scss'
 
 function Layout() {
+
+  // function run every time route changed
+  let location = useLocation();
+  useEffect(() => {
+    document.body.scrollTo(0,0)
+  }, [location]);
+
   return (
     <>
       <header>
