@@ -1,8 +1,11 @@
-import React from 'react'
+import PageThumbnail from "../components/PageThumbnail";
+
 
 function Services() {
   return (
-    <div>Services</div>
+    <>
+    <PageThumbnail title={'NOS SERVICES'}/>
+    </>
   )
 }
 

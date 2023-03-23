@@ -1,9 +1,11 @@
-import React from 'react'
+import PageThumbnail from "../components/PageThumbnail";
+
 
 function Products() {
   return (
-    <div>Products</div>
-  )
+    <>
+      <PageThumbnail title={'NOS PRODUITS'} />
+    </>)
 }
 
 export default Products
