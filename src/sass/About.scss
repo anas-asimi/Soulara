@@ -2,7 +2,7 @@
 
 main.about{
     @include idealWidth;
-    padding-top: 128px;
+    padding-top: 64px;
     max-width: 850px;
     display: flex;
     flex-direction: column;
@@ -17,7 +17,7 @@ main.about{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 32px;
+    gap: 48px;
     .service{
         display: flex;
         flex-direction: column;
