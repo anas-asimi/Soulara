@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect , useRef} from 'react';
 import { useLocation, Outlet, Link } from "react-router-dom";
 import FancyButton from "./components/FancyButton";
 import Select from './components/Select'
@@ -6,14 +6,21 @@ import './sass/Layout.scss'
 
 function Layout() {
 
-  // function run every time route changed
+  const loader = useRef(null)
   let location = useLocation();
+  // function run every time route changed
   useEffect(() => {
     document.body.scrollTo(0,0)
   }, [location]);
+  // hide the loader after 2s
+  useEffect(() => {
+    let delay = 2500
+    setTimeout(()=>{loader.current.style.display = 'none'},delay)
+  }, []);
 
   return (
     <>
+    <div className="loading" ref={loader}><div className="cercle"></div></div>
       <header>
         <div className="bar">
           <div className="brand">

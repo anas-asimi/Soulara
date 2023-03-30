@@ -11,6 +11,13 @@
   font-family: "Roboto", "Courier New", Courier, monospace;
 }
 
+// property declaration for loader
+@property --percentage {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 0%;
+}
+
 // scroll and overflow
 html,
 body {
@@ -18,7 +25,7 @@ body {
   height: 100vh;
   overflow-x: hidden;
 }
-#root{
+#root {
   min-height: 100vh;
 }
 
@@ -36,7 +43,62 @@ body {
   }
 }
 
-// layout styles
+// loading styles
+.loading {
+  position: absolute;
+  inset: 0 0 0 0;
+  z-index: 10;
+  background-color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @keyframes rotateCercle {
+    from {
+      rotate: 0deg;
+    }
+    to {
+      rotate: 360deg;
+    }
+  }
+  @keyframes rotateGradient {
+    from {
+      --percentage: 0%;
+    }
+    30% {
+      --percentage: 100%;
+    }
+    to {
+      --percentage: 0%;
+    }
+  }
+
+  .cercle {
+    position: relative;
+    height: 80px;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+
+    --percentage: 0%;
+    animation: rotateCercle 2s linear infinite, rotateGradient 2s linear infinite;
+    background: conic-gradient($blue var(--percentage), rgba(0, 0, 0, 0) 1%);
+
+    &::after {
+      --width: 2px;
+      content: "";
+      position: absolute;
+      height: calc(100% - 2 * var(--width));
+      aspect-ratio: 1/1;
+      background-color: $white;
+      border-radius: 100%;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+    }
+  }
+}
+
+// header styles
 header {
   position: sticky;
   top: -64px;
@@ -85,6 +147,8 @@ header {
     }
   }
 }
+
+// footer styles
 footer {
   background-color: $black;
   padding-top: 64px;
@@ -99,20 +163,20 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    .left{
+    .left {
       width: 350px;
       display: flex;
       flex-direction: column;
       gap: 16px;
     }
-    .right{
+    .right {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
       gap: 16px;
-      .social{
+      .social {
         display: flex;
-        gap: 16px
+        gap: 16px;
       }
     }
   }
