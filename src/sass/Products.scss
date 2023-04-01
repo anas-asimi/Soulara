@@ -18,10 +18,17 @@ main.products{
             padding: 8px 16px;
             border-radius: 4px;
             outline: none;
-            border: 1px solid $blue;
+            border: none;
             color: $white;
             background-color: $blue;
             cursor: pointer;
+
+            &.disabled{
+                background-color: $light-gray;
+            }
         }
+    }
+    .products-list{
+        width: 100%;
     }
 }

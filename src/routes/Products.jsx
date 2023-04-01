@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import PageThumbnail from "../components/PageThumbnail";
+import ProductCard from '../components/ProductCard';
 import "../sass/Products.scss";
 
 
@@ -22,6 +23,8 @@ function Products() {
   }
 
   function BtnClickHandler(e) {
+    document.querySelectorAll('.products .control button').forEach((btn)=>{btn.classList.add('disabled')})
+    e.target.classList.remove('disabled')
     setFilter(e.target.getAttribute('btn-data'))
   }
 
@@ -37,8 +40,8 @@ function Products() {
           <button onClick={BtnClickHandler} btn-data={'energie solaire'} >energie solaire</button>
           <button onClick={BtnClickHandler} btn-data={'agroforniture'} >agroforniture</button>
         </div>
-        <div className="productsList">
-          {products && productsHandler(products, filter).map((product,i) => <h1 key={i} data={product}>hello</h1>)}
+        <div className="products-list">
+          {products && productsHandler(products, filter).map((product,i) => <ProductCard key={i} data={product}>hello</ProductCard>)}
         </div>
       </main>
     </>)

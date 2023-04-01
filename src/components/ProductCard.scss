@@ -1,0 +1,15 @@
+@use "../sass/theme.scss" as *;
+
+.product-card{
+    padding: 8px 0;
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    border-bottom: 2px solid $light-gray;
+    
+    img{
+        height: 200px;
+        aspect-ratio: 1/1;
+        border-radius: 4px;
+    }
+}
