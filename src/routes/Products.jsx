@@ -10,7 +10,7 @@ function Products() {
   let [filter, setFilter] = useState()
 
   useEffect(() => {
-    fetch("https://o9r077mr.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type%20%3D%3D%20%22product%22%5D%20%7Btitle%2Cdescription%2C'imageUrl'%3Aimage.asset-%3Eurl%2C'category'%3Acategories-%3Ename%7D")
+    fetch("https://o9r077mr.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type%20%3D%3D%20%22product%22%5D%20%7Btitle%2Cdescription%2C'imageUrl'%3Aimage.asset-%3Eurl%2C'category'%3Acategory-%3Ename%7D")
       .then(response => response.json())
       .then(data => setProducts(data.result))
   }, [])
