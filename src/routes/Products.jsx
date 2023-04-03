@@ -35,10 +35,10 @@ function Products() {
       <main className="products">
         <div className="control">
           <button onClick={BtnClickHandler} btn-data={''}  >All</button>
-          <button onClick={BtnClickHandler} btn-data={'irrigation'} >irrigation</button>
-          <button onClick={BtnClickHandler} btn-data={'pompage'} >pompage</button>
-          <button onClick={BtnClickHandler} btn-data={'energie solaire'} >energie solaire</button>
-          <button onClick={BtnClickHandler} btn-data={'agroforniture'} >agroforniture</button>
+          <button onClick={BtnClickHandler} className='disabled' btn-data={'irrigation'} >irrigation</button>
+          <button onClick={BtnClickHandler} className='disabled' btn-data={'pompage'} >pompage</button>
+          <button onClick={BtnClickHandler} className='disabled' btn-data={'energie solaire'} >energie solaire</button>
+          <button onClick={BtnClickHandler} className='disabled' btn-data={'agroforniture'} >agroforniture</button>
         </div>
         <div className="products-list">
           {products && productsHandler(products, filter).map((product,i) => <ProductCard key={i} data={product}>hello</ProductCard>)}

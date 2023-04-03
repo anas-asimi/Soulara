@@ -36,7 +36,7 @@ function Layout() {
         </div>
         <nav>
           <Link to={'/'} >Accueil</Link>
-          <Link to={'about'} >SOULARA</Link>
+          <Link to={'about'} >About</Link>
           <Link to={'contact'} >Contacter</Link>
           <Link to={'products'} >Produits</Link>
           <Link to={'services'} >Services</Link>
