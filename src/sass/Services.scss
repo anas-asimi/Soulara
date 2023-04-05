@@ -1,9 +1,20 @@
 @use "theme" as *;
 
-main.services{
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
+#root:has(main.services){
+    main.services{
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    p.content {
+        @include idealWidth;
+        margin: 32px 0;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+    }
 }
