@@ -215,6 +215,18 @@ header {
       opacity: 1;
       translate: 0 0;
     }
+    .panel{
+      position: absolute;
+      top: 32px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      a{
+        filter: brightness(0) invert(1);
+      }
+    }
   }
 }
 

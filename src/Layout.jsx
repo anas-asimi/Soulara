@@ -28,11 +28,17 @@ function Layout() {
       <div className="loading" ref={loader}><div className="cercle"></div></div>
       <header>
         <nav className={`mobile ${isExpanded ? 'expanded' : ''}`}>
-          <Link to={'/'} >Accueil</Link>
-          <Link to={'about'} >About</Link>
-          <Link to={'contact'} >Contacter</Link>
-          <Link to={'products'} >Produits</Link>
-          <Link to={'services'} >Services</Link>
+          <div className="panel">
+            <a href="#" target="_blank"><img src="/facebook.svg" alt="facebook" height={32} /></a>
+            <a href="#" target="_blank"><img src="/whatsapp.svg" alt="whatsapp" height={32} /></a>
+            <a href="#" target="_blank"><img src="/youtube.svg" alt="youtube" height={32} /></a>
+            <Select isWhite={true} />
+          </div>
+          <Link onClick={() => { setExpanded(false) }} to={'/'} >Accueil</Link>
+          <Link onClick={() => { setExpanded(false) }} to={'about'} >About</Link>
+          <Link onClick={() => { setExpanded(false) }} to={'contact'} >Contacter</Link>
+          <Link onClick={() => { setExpanded(false) }} to={'products'} >Produits</Link>
+          <Link onClick={() => { setExpanded(false) }} to={'services'} >Services</Link>
         </nav>
         <div className="bar">
           <div className="brand">
@@ -42,7 +48,7 @@ function Layout() {
               <p className='small'>solutions agricoles</p>
             </div>
           </div>
-          <button className={`menu-toggler ${isExpanded ? 'expanded' : ''}`} onClick={toggleExpanded}>
+          <button className={`menu-toggler ${isExpanded ? 'expanded' : ''}`} onClick={() => { setExpanded(!isExpanded) }}>
             <div className='line-1'></div>
             <div className='line-2'></div>
             <div className='line-3'></div>

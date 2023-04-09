@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react'
 import './Select.scss'
 
-function Select() {
+function Select({isWhite=false}) {
 
   let [language, setLanguage] = useState('french')
   let options = useRef()
@@ -17,7 +17,7 @@ function Select() {
   }
 
   return (
-    <div className="select-container" onClick={optionsToggler} onMouseLeave={optionsHide}>
+    <div className={`select-container ${isWhite?'white':''}`} onClick={optionsToggler} onMouseLeave={optionsHide}>
       <div className="selected">
         {language}
         <img src="/angle-down-blue.svg" height={'20px'} />
