@@ -1,4 +1,4 @@
-import { useEffect , useRef} from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useLocation, Outlet, Link } from "react-router-dom";
 import FancyButton from "./components/FancyButton";
 import Select from './components/Select'
@@ -6,27 +6,47 @@ import './sass/Layout.scss'
 
 function Layout() {
 
+  const [isExpanded, setExpanded] = useState(false)
   const loader = useRef(null)
   let location = useLocation();
   // function run every time route changed
   useEffect(() => {
-    document.body.scrollTo(0,0)
+    document.body.scrollTo(0, 0)
   }, [location]);
   // hide the loader after 2s
   useEffect(() => {
     let delay = 0
-    setTimeout(()=>{loader.current.style.display = 'none'},delay)
+    setTimeout(() => { loader.current.style.display = 'none' }, delay)
   }, []);
+
+  function toggleExpanded() {
+    setExpanded(!isExpanded)
+  }
 
   return (
     <>
-    <div className="loading" ref={loader}><div className="cercle"></div></div>
+      <div className="loading" ref={loader}><div className="cercle"></div></div>
       <header>
+        <nav className={`mobile ${isExpanded ? 'expanded' : ''}`}>
+          <Link to={'/'} >Accueil</Link>
+          <Link to={'about'} >About</Link>
+          <Link to={'contact'} >Contacter</Link>
+          <Link to={'products'} >Produits</Link>
+          <Link to={'services'} >Services</Link>
+        </nav>
         <div className="bar">
           <div className="brand">
             <img src="/brand.png" alt="Soulara" height={48} />
-            <p>Soulara</p>
+            <div className="text">
+              <p>Soulara</p>
+              <p className='small'>solutions agricoles</p>
+            </div>
           </div>
+          <button className={`menu-toggler ${isExpanded ? 'expanded' : ''}`} onClick={toggleExpanded}>
+            <div className='line-1'></div>
+            <div className='line-2'></div>
+            <div className='line-3'></div>
+          </button>
           <div className="panel">
             <a href="#" target="_blank"><img src="/facebook.svg" alt="facebook" height={32} /></a>
             <a href="#" target="_blank"><img src="/whatsapp.svg" alt="whatsapp" height={32} /></a>
@@ -34,7 +54,7 @@ function Layout() {
             <Select />
           </div>
         </div>
-        <nav>
+        <nav className='desktop'>
           <Link to={'/'} >Accueil</Link>
           <Link to={'about'} >About</Link>
           <Link to={'contact'} >Contacter</Link>
