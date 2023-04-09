@@ -80,7 +80,8 @@ body {
     border-radius: 100%;
 
     --percentage: 0%;
-    animation: rotateCercle 2s linear infinite, rotateGradient 2s linear infinite;
+    animation: rotateCercle 2s linear infinite,
+      rotateGradient 2s linear infinite;
     background: conic-gradient($blue var(--percentage), rgba(0, 0, 0, 0) 1%);
 
     &::after {
@@ -100,7 +101,7 @@ body {
 
 // header styles
 header {
-  position: sticky;
+  // position: sticky;
   top: -64px;
   z-index: 4;
   background-color: $white;
@@ -124,11 +125,54 @@ header {
     }
 
     .panel {
-      z-index: 8;
+      z-index: 0;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 16px;
+      .menu-toggler {
+        display: none;
+        margin: 0 8px;
+        position: relative;
+        height: 24px;
+        width: 24px;
+        outline: none;
+        border: none;
+        div {
+          position: absolute;
+          height: 2px;
+          width: 24px;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%) rotate(0);
+          transform-origin: 50% 50%;
+          background-color: $blue;
+          transition: all 0.5s;
+          &:nth-child(1) {
+            translate: 0 -10px;
+          }
+          &:nth-child(2) {
+            translate: 0 0px;
+          }
+          &:nth-child(3) {
+            translate: 0 10px;
+          }
+        }
+        &.expanded div {
+          &:nth-child(1) {
+            translate: 0 0px;
+            transform: translate(-50%, -50%) rotate(45deg);
+          }
+          &:nth-child(2) {
+            translate: 0 0px;
+            opacity: 0;
+          }
+          &:nth-child(3) {
+            translate: 0 0px;
+            transform: translate(-50%, -50%) rotate(-45deg);
+          }
+        }
+      }
     }
   }
 
@@ -138,6 +182,7 @@ header {
     align-items: center;
     justify-content: center;
     gap: 48px;
+    z-index: 2;
 
     background-color: $blue;
     a {
@@ -183,5 +228,27 @@ footer {
   .copy-right {
     @include idealWidth;
     text-align: center;
+  }
+}
+
+@media (max-width: 740px) {
+  header {
+    .menu-toggler{
+      display: block !important;
+    }
+    nav {
+      height: calc(100vh - 64px);
+      width: 100vw;
+      top: 64px;
+      left: 100vw;
+      position: absolute;
+      flex-direction: column;
+      opacity: 0;
+      transition: all 0.5s;
+      &.expanded {
+        left: 0;
+        opacity: 1;
+      }
+    }
   }
 }

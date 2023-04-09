@@ -1,4 +1,4 @@
-import { useEffect , useRef} from 'react';
+import { useEffect , useRef , useState} from 'react';
 import { useLocation, Outlet, Link } from "react-router-dom";
 import FancyButton from "./components/FancyButton";
 import Select from './components/Select'
@@ -6,6 +6,7 @@ import './sass/Layout.scss'
 
 function Layout() {
 
+  const [expanded , setExpanded] = useState(false);
   const loader = useRef(null)
   let location = useLocation();
   // function run every time route changed
@@ -32,14 +33,19 @@ function Layout() {
             <a href="#" target="_blank"><img src="/whatsapp.svg" alt="whatsapp" height={32} /></a>
             <a href="#" target="_blank"><img src="/youtube.svg" alt="youtube" height={32} /></a>
             <Select />
+            <button className={`menu-toggler ${expanded?'expanded':''}`} onClick={()=>setExpanded(!expanded)}>
+              <div></div>
+              <div></div>
+              <div></div>
+            </button>
           </div>
         </div>
-        <nav>
-          <Link to={'/'} >Accueil</Link>
-          <Link to={'about'} >About</Link>
-          <Link to={'contact'} >Contacter</Link>
-          <Link to={'products'} >Produits</Link>
-          <Link to={'services'} >Services</Link>
+        <nav className={expanded?'expanded':''}>
+          <Link onClick={()=>setExpanded(false)} to={'/'} >Accueil</Link>
+          <Link onClick={()=>setExpanded(false)} to={'about'} >About</Link>
+          <Link onClick={()=>setExpanded(false)} to={'contact'} >Contacter</Link>
+          <Link onClick={()=>setExpanded(false)} to={'products'} >Produits</Link>
+          <Link onClick={()=>setExpanded(false)} to={'services'} >Services</Link>
         </nav>
       </header>
       <Outlet />
