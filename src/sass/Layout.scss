@@ -270,6 +270,7 @@ footer {
 
 @media (max-width: 740px) {
   header{
+    top: 0px;
     .bar .panel , nav.desktop {
       display: none;
     }
