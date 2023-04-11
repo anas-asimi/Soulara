@@ -208,7 +208,8 @@ header {
     translate: 100vw 0;
     a {
       color: $white;
-      font-size: large;
+      font-size: x-large;
+      font-weight: 300;
       line-height: normal;
     }
     &.expanded{

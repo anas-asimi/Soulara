@@ -11,7 +11,7 @@ function Home() {
         <div className="content">
           <h2>
             Augmenter votre productivité, Réduire votre coûts et la consommation
-            d'eau !
+            d'eau!
           </h2>
           <FancyButton destination={"contact"} text={'Contactez-nous'} />
         </div>
@@ -40,11 +40,8 @@ function Home() {
       <div className="stats-wrapper">
         <div className="stats">
           <Stat number={'961'} text={'Projets réalisés'} />
-          <div className="line"></div>
           <Stat number={'2,000,000+'} text={'Clients heureux'} />
-          <div className="line"></div>
           <Stat number={'14'} text={"Années d'experience"} />
-          <div className="line"></div>
           <Stat number={'12'} text={'Fournisseurs Internationaux'} />
         </div>
       </div>

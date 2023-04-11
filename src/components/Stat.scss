@@ -1,12 +1,17 @@
 @use "../sass/theme.scss" as *;
 
 .stat{
+    min-width: 160px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 16px;
-    h5,p{
+    h5{
+        color: $white;
+        font-weight: normal;
+    }
+    p{
         color: $white;
     }
 }

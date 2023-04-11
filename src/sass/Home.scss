@@ -1,6 +1,5 @@
 @use "theme" as *;
 
-
 .hero {
   background-image: linear-gradient(
       120deg,
@@ -14,7 +13,7 @@
   background-size: cover;
   .content {
     @include idealWidth;
-    padding: 128px 0;
+    padding: 128px 8px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -28,18 +27,28 @@
 }
 .about {
   @include idealWidth;
-  padding: 128px 0 64px 0;
+
+  padding-top: 128px;
+  padding-bottom: 64px;
+  padding-inline: 16px;
+
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 64px;
+
   > img {
     @include boxShadow;
+    object-fit: cover;
     border-radius: 4px;
     height: 400px;
-    width: 500px;
+    min-width: 400px;
+    flex: 2 0;
   }
   .text {
     max-height: 400px;
+    min-width: 425px;
+    flex: 1 0;
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -58,15 +67,9 @@
   padding-top: 64px;
   .stats {
     @include idealWidth;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    .line {
-      width: 2px;
-      height: 64px;
-      background-color: $white;
-      border-radius: 8px;
-    }
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 32px;
   }
 }
 .agroequipement {
@@ -114,7 +117,7 @@
   justify-content: center;
   flex-direction: column;
   gap: 64px;
-  .slider-wrapper{
+  .slider-wrapper {
     height: 40px;
     width: 100%;
     position: relative;
@@ -139,10 +142,18 @@
       from {
         translate: 0 0;
       }
-    
+
       to {
         translate: -50% 0;
       }
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  .stats-wrapper {
+    .stats {
+      grid-template-columns: 1fr 1fr;
     }
   }
 }
