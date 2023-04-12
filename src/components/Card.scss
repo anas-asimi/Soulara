@@ -9,8 +9,8 @@
   img {
     @include boxShadow;
     border-radius: 4px;
-    height: 256px;
-    aspect-ratio: 1 / 1;
+    height: 250px;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
   }
   p{

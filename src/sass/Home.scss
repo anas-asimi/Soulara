@@ -83,7 +83,6 @@
 }
 .services {
   .container {
-    @include idealWidth;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -93,9 +92,8 @@
       color: $white;
     }
     .cards {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
       gap: 32px;
     }
   }
@@ -150,6 +148,27 @@
   }
 }
 
+
+@media (max-width: 1500px) {
+  .services {
+    .container {
+      .cards {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+}
+
+@media (max-width: 740px) {
+  .services {
+    .container {
+      .cards {
+        width: 100%;
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
 @media (max-width: 860px) {
   .stats-wrapper {
     .stats {
