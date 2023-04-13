@@ -11,7 +11,10 @@ main.products{
     gap: 32px;
 
     .control{
+        padding-inline: 8px;
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 24px;
 
         button{

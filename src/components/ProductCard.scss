@@ -3,12 +3,14 @@
 .product-card{
     padding: 8px 0;
     display: flex;
+    align-items: center;
     gap: 16px;
     width: 100%;
     border-bottom: 2px solid $light-gray;
     
     img{
-        height: 200px;
+        height: clamp(156px , 20vw , 200px);
+        // height: min(200px , 20vw , 100px);
         aspect-ratio: 1/1;
         border-radius: 4px;
     }

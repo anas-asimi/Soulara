@@ -6,7 +6,7 @@ function ProductCard({ data }) {
             <img src={data.imageUrl} />
             <div className="content">
                 <h3>{data.title}</h3>
-                <p className="big">{data.description}</p>
+                <p>{data.description}</p>
             </div>
         </div>
     )
