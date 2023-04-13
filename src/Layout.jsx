@@ -19,19 +19,15 @@ function Layout() {
     setTimeout(() => { loader.current.style.display = 'none' }, delay)
   }, []);
 
-  function toggleExpanded() {
-    setExpanded(!isExpanded)
-  }
-
   return (
     <>
       <div className="loading" ref={loader}><div className="cercle"></div></div>
       <header>
         <nav className={`mobile ${isExpanded ? 'expanded' : ''}`}>
           <div className="panel">
-            <a href="#" target="_blank"><img src="/facebook.svg" alt="facebook" height={32} /></a>
-            <a href="#" target="_blank"><img src="/whatsapp.svg" alt="whatsapp" height={32} /></a>
-            <a href="#" target="_blank"><img src="/youtube.svg" alt="youtube" height={32} /></a>
+            <a href="#" target="_blank"><img src="/social/facebook.svg" alt="facebook" height={32} /></a>
+            <a href="#" target="_blank"><img src="/social/whatsapp.svg" alt="whatsapp" height={32} /></a>
+            <a href="#" target="_blank"><img src="/social/youtube.svg" alt="youtube" height={32} /></a>
             <Select isWhite={true} />
           </div>
           <Link onClick={() => { setExpanded(false) }} to={'/'} >Accueil</Link>
@@ -54,9 +50,9 @@ function Layout() {
             <div className='line-3'></div>
           </button>
           <div className="panel">
-            <a href="#" target="_blank"><img src="/facebook.svg" alt="facebook" height={32} /></a>
-            <a href="#" target="_blank"><img src="/whatsapp.svg" alt="whatsapp" height={32} /></a>
-            <a href="#" target="_blank"><img src="/youtube.svg" alt="youtube" height={32} /></a>
+            <a href="#" target="_blank"><img src="/social/facebook.svg" alt="facebook" height={32} /></a>
+            <a href="#" target="_blank"><img src="/social/whatsapp.svg" alt="whatsapp" height={32} /></a>
+            <a href="#" target="_blank"><img src="/social/youtube.svg" alt="youtube" height={32} /></a>
             <Select />
           </div>
         </div>
@@ -74,13 +70,13 @@ function Layout() {
           <div className="left">
             <h2>Soulara inc</h2>
             <p>Etudes et réalisation des projets agricoles Bassins agricoles, Goutte a goutte, Terrassements, Import et Export.</p>
-            <FancyButton destination={"contact"} text={'Contactez-nous'} size={'regular'} />
+            <FancyButton destination="contact" text='Contactez-nous' size='regular' />
           </div>
           <div className="right">
             <div className="social">
-              <a href="#" target="_blank"><img src="/facebook.svg" alt="facebook" height={32} /></a>
-              <a href="#" target="_blank"><img src="/whatsapp.svg" alt="whatsapp" height={32} /></a>
-              <a href="#" target="_blank"><img src="/youtube.svg" alt="youtube" height={32} /></a>
+              <a href="#" target="_blank"><img src="/social/facebook.svg" alt="facebook" height={32} /></a>
+              <a href="#" target="_blank"><img src="/social/whatsapp.svg" alt="whatsapp" height={32} /></a>
+              <a href="#" target="_blank"><img src="/social/youtube.svg" alt="youtube" height={32} /></a>
             </div>
             <p>05355-28648 / 0661438144</p>
             <p>Résidence kounouz 2 Mag 4 Av des Fars, Meknès 50000</p>
