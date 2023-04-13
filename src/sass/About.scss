@@ -14,9 +14,10 @@ main.about{
 .about-services{
     padding-top: 64px;
     padding-bottom: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-inline: auto;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 48px;
     .service{
         display: flex;
@@ -33,3 +34,10 @@ main.about{
         }
     }
 }
+
+@media (max-width: 680px) {
+    .about-services{
+        grid-template-columns: 1fr 1fr;
+        column-gap: 128px;
+    }
+  }

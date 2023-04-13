@@ -42,13 +42,13 @@
     object-fit: cover;
     border-radius: 4px;
     height: 400px;
-    min-width: 400px;
-    flex: 2 0;
+    min-width: min(400px,100%);
+    flex: 2 1;
   }
   .text {
     max-height: 400px;
-    min-width: 425px;
-    flex: 1 0;
+    min-width: min(425px,100%);
+    flex: 1 1;
     display: flex;
     flex-direction: column;
     gap: 32px;

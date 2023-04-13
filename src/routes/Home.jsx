@@ -13,7 +13,7 @@ function Home() {
             Augmenter votre productivité, Réduire votre coûts et la consommation
             d'eau!
           </h2>
-          <FancyButton destination={"contact"} text={'Contactez-nous'} />
+          <FancyButton destination="contact" text='Contactez-nous' />
         </div>
       </div>
       {/* ======  ====== */}
@@ -39,10 +39,10 @@ function Home() {
       {/* ======  ====== */}
       <div className="stats-wrapper">
         <div className="stats">
-          <Stat number={'961'} text={'Projets réalisés'} />
-          <Stat number={'2,000,000+'} text={'Clients heureux'} />
-          <Stat number={'14'} text={"Années d'experience"} />
-          <Stat number={'12'} text={'Fournisseurs Internationaux'} />
+          <Stat number='961' text='Projets réalisés' />
+          <Stat number='2,000,000+' text='Clients heureux' />
+          <Stat number='14' text="Années d'experience" />
+          <Stat number='12' text='Fournisseurs Internationaux' />
         </div>
       </div>
       {/* ======  ====== */}
@@ -50,10 +50,10 @@ function Home() {
         <div className="container">
           <h3>AGROÉQUIPEMENT</h3>
           <div className="cards">
-            <Card image={'https://cmgp-cas.com/wp-content/uploads/2022/02/Tubes-et-Tuyaux.jpg'} title={'Irrigation'} />
-            <Card image={'https://cmgp-cas.com/wp-content/uploads/2022/02/Panneaux-solaires.jpg'} title={'Énergie Solaire'} />
-            <Card image={'https://cmgp-cas.com/wp-content/uploads/2022/02/Pompes-immergees.jpg'} title={'Pompage'} />
-            <Card image={'https://s3-alpha-sig.figma.com/img/9590/b218/24ee44cc2774ea85be83592617f62fb6?Expires=1679875200&Signature=BFyuUchV0IygwxQt2ef3GPPfmSgMi2Wey0ET4dpyOR3dDSAhtKrFRQ3FXv3tXT69M6vl5L7EH8j~3rJE1Upcnqe626Uwc845LSJ~9jeNFeizd1USnko1FkJ5WpnlLnNuV0N46rEYmeYTT1xKkAFwSEnZdLAJUK~pgVtQsmYuFBVoNYh6eGCa4WRV9fz6B~Lw04-HW0CdrAQpDbN2GN-kAKteibHNfVow7uSzmcgxGqBqg0o1jSzE~kBuCjOQX6pC3I7ytBi6uAJk0xLlBUy66yjIRYsfIT~1xNJsdGik4pM95KwQMwy8LJ0AHcL7JhLmVDyl4iX8UC9aPH1g~cJj2Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'} title={'Piscines'} />
+            <Card image='/agroequipement & agrofourniture/irrigation.jpg' title='Irrigation' />
+            <Card image='/agroequipement & agrofourniture/energie solaire.jpg' title='Énergie Solaire' />
+            <Card image='/agroequipement & agrofourniture/pompage.jpg' title='Pompage' />
+            <Card image='/agroequipement & agrofourniture/piscines.jpg' title='Piscines' />
           </div>
         </div>
       </div>
@@ -64,10 +64,10 @@ function Home() {
         <div className="container">
           <h3>AGROFOURNITURE</h3>
           <div className="cards">
-            <Card image={'https://cmgp-cas.com/wp-content/uploads/2022/04/ENGRAIS-AZOTES.jpg'} title={'Engrais'} />
-            <Card image={'https://cmgp-cas.com/wp-content/uploads/2022/02/Fongicides.jpg'} title={'Produits Phytosanitaires'} />
-            <Card image={'https://cmgp-cas.com/wp-content/uploads/2022/03/Legumineuses.jpg'} title={'Semences Et Substrats'} />
-            <Card image={'https://cmgp-cas.com/wp-content/uploads/2022/03/Filets-brise-vent.jpg'} title={'Plastiques Et Filets Agricoles'} />
+            <Card image='/agroequipement & agrofourniture/engrais.jpg' title='Engrais' />
+            <Card image='/agroequipement & agrofourniture/produits phytosanitaires.jpg' title='Produits Phytosanitaires' />
+            <Card image='/agroequipement & agrofourniture/semences.jpg' title='Semences Et Substrats' />
+            <Card image='/agroequipement & agrofourniture/filets.jpg' title='Plastiques Et Filets Agricoles' />
           </div>
         </div>
       </div>

@@ -2,13 +2,16 @@
 
 main.contact {
   @include idealWidth;
-  padding-top: 64px;
-  padding-bottom: 64px;
+  padding-block: 64px;
   display: flex;
+  flex-wrap: wrap;
   gap: 32px;
 
   form {
-    flex: 1;
+    height: 450px;
+    min-width: min(450px , 100%);
+    flex: 1 0;
+
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
@@ -52,9 +55,11 @@ main.contact {
   }
 
   .map {
-    position: relative;
     height: 450px;
-    flex: 1;
+    min-width: min(450px , 100%);
+    flex: 1 0;
+
+    position: relative;
     overflow: hidden;
     @include boxShadow;
     border-radius: 4px;
