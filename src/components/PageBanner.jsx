@@ -1,4 +1,4 @@
-import './PageThumbnail.scss'
+import './PageBanner.scss'
 
 function PageThumbnail({title}) {
     return (

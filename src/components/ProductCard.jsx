@@ -5,7 +5,7 @@ function ProductCard({ data }) {
         <div className="product-card">
             <img src={data.imageUrl} />
             <div className="content">
-                <h3>{data.title}</h3>
+                <h4>{data.title}</h4>
                 <p>{data.description}</p>
             </div>
         </div>

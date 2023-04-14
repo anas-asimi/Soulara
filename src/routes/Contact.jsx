@@ -1,12 +1,12 @@
 import FancyButton from "../components/FancyButton";
-import PageThumbnail from "../components/PageThumbnail";
+import PageBanner from "../components/PageBanner";
 import "../sass/Contact.scss";
 
 function Contact() {
 
   return (
     <>
-      <PageThumbnail title={'CONTACTEZ-NOUS'}/>
+      <PageBanner title={'CONTACTEZ-NOUS'}/>
       <main className="contact">
         <form action="#">
 

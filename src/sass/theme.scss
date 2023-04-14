@@ -14,7 +14,7 @@ $white: #fafafa;
 @mixin idealWidth {
   margin-right: auto;
   margin-left: auto;
-  padding: 0 8px;
+  padding: 0 16px;
   width: min(100%, 384px + 50%, 1200px);
 }
 

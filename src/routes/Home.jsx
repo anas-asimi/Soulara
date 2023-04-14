@@ -1,7 +1,7 @@
 import FancyButton from "../components/FancyButton";
 import Stat from "../components/Stat";
 import Card from "../components/Card";
-import { ReactComponent as SectionsDivider } from "../../public/triangle-bottom-right-icon.svg";
+import { ReactComponent as Triangle } from "../components/triangle.svg";
 import "../sass/Home.scss";
 
 function Home() {
@@ -18,7 +18,7 @@ function Home() {
       </div>
       {/* ======  ====== */}
       <div className="about">
-        <img src="https://cmgp-cas.com/wp-content/uploads/2022/02/Bassins.jpg" />
+        <img src="./bassins.webp" />
         <div className="text">
           <h5>
             Augmenter votre productivité, Réduire votre coûts et la consommation
@@ -58,7 +58,7 @@ function Home() {
         </div>
       </div>
       {/* ======  ====== */}
-      <SectionsDivider className='sections-divider' />
+      <Triangle className='sections-divider' />
       {/* ======  ====== */}
       <div className="services agrofourniture">
         <div className="container">
@@ -72,7 +72,7 @@ function Home() {
         </div>
       </div>
       {/* ======  ====== */}
-      <SectionsDivider className='sections-divider' />
+      <Triangle className='sections-divider two' />
       {/* ======  ====== */}
       <div className="partenaires">
         <h3>NOS PARTENAIRES</h3>

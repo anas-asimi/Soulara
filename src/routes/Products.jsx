@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import PageThumbnail from "../components/PageThumbnail";
+import PageBanner from "../components/PageBanner";
 import ProductCard from '../components/ProductCard';
 import "../sass/Products.scss";
 
@@ -31,7 +31,7 @@ function Products() {
 
   return (
     <>
-      <PageThumbnail title={'NOS PRODUITS'} />
+      <PageBanner title={'NOS PRODUITS'} />
       <main className="products">
         <div className="control">
           <button onClick={BtnClickHandler} btn-data={''}  >All</button>

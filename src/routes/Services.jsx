@@ -1,4 +1,4 @@
-import PageThumbnail from "../components/PageThumbnail";
+import PageBanner from "../components/PageBanner";
 import ServiceCard from "../components/ServiceCard";
 import "../sass/Services.scss";
 
@@ -13,7 +13,7 @@ function Services() {
   ]
   return (
     <>
-      <PageThumbnail title={'NOS SERVICES'} />
+      <PageBanner title={'NOS SERVICES'} />
       <p className="big content">Dans le but d’améliorer la performance de l’agriculture marocaine, SOULARA accompagne les acteurs principaux de ce secteur primaire porteur au Maroc. Notre entreprise ne se contente plus de sa place de leader sur le marché, elle cherche à acquérir de nouveaux avantages concurrentiels, tout en diversifiant sa large gamme de produits. Ci-après le panel de services.</p>
       <main className='services'>
         {services.map((item,i)=><ServiceCard key={i} data={item}/>)}

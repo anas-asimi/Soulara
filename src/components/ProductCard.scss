@@ -1,21 +1,26 @@
 @use "../sass/theme.scss" as *;
 
-.product-card{
-    padding: 8px 0;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    width: 100%;
-    border-bottom: 2px solid $light-gray;
-    
-    img{
-        height: clamp(156px , 20vw , 200px);
-        // height: min(200px , 20vw , 100px);
-        aspect-ratio: 1/1;
-        border-radius: 4px;
-    }
-
-    &:last-child{
-        border: none;
-    }
+.product-card {
+  padding: 8px 0;
+  display: flex;
+  align-items: start;
+  gap: 16px;
+  width: 100%;
+  border-bottom: 2px solid $light-gray;
+  img {
+    height: clamp(156px, 20vw, 200px);
+    // height: min(200px , 20vw , 100px);
+    aspect-ratio: 1/1;
+    border-radius: 4px;
+  }
+  .content h4 {
+    line-height: 32px;
+    font-weight: 300;
+  }
+  .content p {
+    margin-top: 16px;
+  }
+  &:last-child {
+    border: none;
+  }
 }
