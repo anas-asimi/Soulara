@@ -15,7 +15,7 @@ function Layout() {
   }, [location]);
   // hide the loader after 2s
   useEffect(() => {
-    let delay = 0
+    let delay = 2000
     setTimeout(() => { loader.current.style.display = 'none' }, delay)
   }, []);
 
