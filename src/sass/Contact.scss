@@ -5,6 +5,7 @@ main.contact {
   padding-block: 64px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 32px;
 
   form {
@@ -20,12 +21,12 @@ main.contact {
 
     .input-wrapper {
       // height of each input wrapper
-      --row-height: 60px;
+      --row-height: 48px;
       // size of gap
       --gap-width: 8px;
-      height: var(--row-height);
-      // default width
+      // default width and height
       width: 100%;
+      height: var(--row-height);
     }
     // first two inputs are half width
     .input-wrapper:nth-of-type(1),
@@ -34,6 +35,7 @@ main.contact {
     }
     // forth input fill avaiable height
     .input-wrapper:nth-of-type(4) {
+      width: 100%;
       height: calc(450px - 3 * (var(--gap-width) + var(--row-height)));
     }
 
@@ -43,7 +45,9 @@ main.contact {
       input,textarea {
         height: 100%;
         width: 100%;
+        font-size: medium;
         border: 2px solid $light-gray;
+        border-radius: 4px;
         padding: 4px 8px;
         outline: none;
         resize: none;
@@ -55,7 +59,7 @@ main.contact {
     }
   }
 
-  .map {
+  #map {
     height: 450px;
     min-width: min(450px , 100%);
     max-width: 600px;

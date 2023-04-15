@@ -8,10 +8,11 @@
   width: 100%;
   border-bottom: 2px solid $light-gray;
   img {
-    height: clamp(156px, 20vw, 200px);
+    width: clamp(128px, 20vw, 200px);
     // height: min(200px , 20vw , 100px);
     aspect-ratio: 1/1;
     border-radius: 4px;
+    object-fit: contain;
   }
   .content h4 {
     line-height: 32px;
