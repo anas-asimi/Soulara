@@ -1,36 +1,8 @@
-import { useEffect, useRef } from 'react';
 import FancyButton from "../components/FancyButton";
 import PageBanner from "../components/PageBanner";
 import "../sass/Contact.scss";
 
 function Contact() {
-
-  let mapDiv = useRef(null)
-
-  async function initMap() {
-    // The location of soulara
-    const position = { lat: 33.8986412, lng: -5.515229 };
-    // Request needed libraries.
-    const { Map } = await google.maps.importLibrary("maps");
-    const { AdvancedMarkerView } = await google.maps.importLibrary("marker");
-    // The map, centered at soulara
-    let map = new Map(mapDiv.current, {
-      zoom: 12,
-      center: position,
-      mapId: "DEMO_MAP_ID",
-    });
-    // The marker, positioned at Uluru
-    const marker = new AdvancedMarkerView({
-      map: map,
-      position: position,
-      title: "Soulara",
-    });
-  }
-
-  useEffect(() => {
-    initMap();
-  })
-
 
   return (
     <>
@@ -59,21 +31,14 @@ function Contact() {
           </div>
 
         </form>
-        <div id="map" ref={mapDiv}></div>
-        {/* <div id="map">
+        <div id="map">
           <iframe
-            src="https://www.google.com/maps/d/embed?mid=1IoAZovsEJ1PppYu9BwaY7ChrbQebnG0&ehbc=2E312F"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAGx828P03zHbVShwPdNDEiUwNsCvoDU3k&q=soulara+meknes"
           ></iframe>
-        </div> */}
-      </main></>
+        </div>
+      </main>
+    </>
   )
 }
 
 export default Contact
-
-
-
-{/* 
-you can edit the map window here :
-https://www.google.com/maps/d/u/0/edit?mid=1IoAZovsEJ1PppYu9BwaY7ChrbQebnG0&usp=sharing
-*/}
