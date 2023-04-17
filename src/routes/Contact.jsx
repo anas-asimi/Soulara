@@ -33,7 +33,9 @@ function Contact() {
         </form>
         <div id="map">
           <iframe
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAGx828P03zHbVShwPdNDEiUwNsCvoDU3k&q=soulara+meknes"
+            loading="lazy"
+            allowfullscreen
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAGx828P03zHbVShwPdNDEiUwNsCvoDU3k&q=soulara+meknes&zoom=14"
           ></iframe>
         </div>
       </main>
