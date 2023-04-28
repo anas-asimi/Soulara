@@ -11,7 +11,7 @@ function Layout() {
   let location = useLocation();
   // function run every time route changed
   useEffect(() => {
-    document.body.scrollTo(0, 0)
+    document.getElementById('root').scrollTo(0, 0)
   }, [location]);
   // hide the loader after 2s
   useEffect(() => {

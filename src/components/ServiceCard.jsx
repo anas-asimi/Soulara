@@ -1,7 +1,6 @@
 import './ServiceCard.scss'
 
 function ServiceCard({ data }) {
-    console.log(data);
     return (
         <div className="service-card">
             <img src={data.imgUrl} alt="data.title" />
