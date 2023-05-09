@@ -28,13 +28,8 @@ main.contact {
       width: 100%;
       height: var(--row-height);
     }
-    // first two inputs are half width
-    .input-wrapper:nth-of-type(1),
-    .input-wrapper:nth-of-type(2){
-      width: calc(50% - var(--gap-width) / 2);
-    }
-    // forth input fill avaiable height
-    .input-wrapper:nth-of-type(4) {
+    // 3 input fill avaiable height
+    .input-wrapper:nth-of-type(3) {
       width: 100%;
       height: calc(450px - 3 * (var(--gap-width) + var(--row-height)));
     }
