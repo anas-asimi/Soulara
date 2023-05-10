@@ -51,13 +51,13 @@ function Contact() {
       <main className="contact">
         <form ref={form} onSubmit={sendEmail}>
           <div className="input-wrapper">
-            <input type="text" name='name' id='name' placeholder='Enter your name' />
+            <input type="text" name='name' id='name' placeholder='Enter your name' required/>
           </div>
           <div className="input-wrapper">
-            <input type="email" name='email' id='email' placeholder='Enter your email' />
+            <input type="email" name='email' id='email' placeholder='Enter your email' required />
           </div>
           <div className="input-wrapper">
-            <textarea name="message" id="message" placeholder="Enter your message"></textarea>
+            <textarea name="message" id="message" placeholder="Enter your message" required></textarea>
           </div>
           <div className="input-wrapper">
             <button type="submit" className='button regular'>
