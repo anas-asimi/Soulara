@@ -40,8 +40,8 @@ function Layout() {
           <div className="brand">
             <img src="/brand.png" alt="Soulara" height={48} />
             <div className="text">
-              <p>Soulara</p>
-              <p className='small'>solutions agricoles</p>
+              <p>MANSOURI</p>
+              <p className='small'>etude et travaux divers</p>
             </div>
           </div>
           <button className={`menu-toggler ${isExpanded ? 'expanded' : ''}`} onClick={() => { setExpanded(!isExpanded) }}>
@@ -68,7 +68,7 @@ function Layout() {
       <footer>
         <div className="container">
           <div className="left">
-            <h2>Soulara inc</h2>
+            <h2>LES FRERES MANSOURI sté</h2>
             <p>Etudes et réalisation des projets agricoles Bassins agricoles, Goutte a goutte, Terrassements, Import et Export.</p>
             <FancyButton destination="contact" text='Contactez-nous' size='regular' />
           </div>
@@ -78,8 +78,8 @@ function Layout() {
               <a href="#" target="_blank"><img src="/social/whatsapp.svg" alt="whatsapp" height={32} /></a>
               <a href="#" target="_blank"><img src="/social/youtube.svg" alt="youtube" height={32} /></a>
             </div>
-            <p>05355-28648 / 0661438144</p>
-            <p>Résidence kounouz 2 Mag 4 Av des Fars, Meknès 50000</p>
+            <p>0639990766</p>
+            <p>I-B DIAR MENZH ET-3 AP27، Rue de Chefchaouen, Meknes 50000</p>
           </div>
         </div>
         <div className="copy-right">©2023 Anas Asimi, all rights reserved</div>

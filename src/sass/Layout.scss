@@ -117,11 +117,14 @@ header {
       .text {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
+        p {
+          font-size: 16px;
+          font-weight: 400;
+        }
         p:first-child {
-          font-size: 32px;
-          line-height: 32px;
+          font-size: 24px;
           font-weight: 300;
         }
       }
@@ -255,7 +258,7 @@ footer {
         margin-block: 16px;
       }
       h2 {
-        line-height: 54px;
+        margin-top: 4px;
       }
     }
     .right {

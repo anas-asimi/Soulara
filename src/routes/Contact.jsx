@@ -70,7 +70,7 @@ function Contact() {
           <iframe
             loading="lazy"
             allowFullScreen
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAGx828P03zHbVShwPdNDEiUwNsCvoDU3k&q=soulara+meknes&zoom=14"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAGx828P03zHbVShwPdNDEiUwNsCvoDU3k&q=LES+FRERES+MANSOURI+ETUDE+ET+TRAVAUX+DIVERS&zoom=14"
           ></iframe>
         </div>
       </main>
