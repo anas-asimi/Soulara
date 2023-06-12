@@ -1,16 +1,20 @@
 @use "theme" as *;
 
 .hero {
+  width: 100%;
+  position: relative;
   background-image: linear-gradient(
-      120deg,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0.7988445378151261) 31%,
-      rgba(0, 0, 0, 0) 100%
-    ),
-    url("/hero-image.webp");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    120deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.7988445378151261) 31%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  .background-image {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    object-fit: cover
+  }
   .content {
     @include idealWidth;
     padding-block: 128px;

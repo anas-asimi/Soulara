@@ -8,6 +8,7 @@ function Home() {
   return (
     <>
       <div className="hero">
+        <img className="background-image" src="/hero-image.webp" width='100%' height='100%' />
         <div className="content">
           <h2>
             Augmenter votre productivité, Réduire votre coûts et la consommation
@@ -18,7 +19,7 @@ function Home() {
       </div>
       {/* ======  ====== */}
       <div className="about">
-        <img src="./bassins.webp" />
+        <img src="./bassins.webp" loading="lazy" />
         <div className="text">
           <h5>
             Augmenter votre productivité, Réduire votre coûts et la consommation
